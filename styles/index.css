@@ -137,7 +137,7 @@ h1 {
 .invitation .text_container {
   color: #00798c;
   font-size: 6em;
-  font-size: calc(1em + 3vw);
+  font-size: calc(1em + 4vw);
   font-weight: normal;
   margin: 3rem 0 3rem 0;
 }
