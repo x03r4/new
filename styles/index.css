@@ -285,6 +285,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateY(-100px);
 }
 main h1 {
   font-size: calc(5em + 18vw);
@@ -292,7 +293,7 @@ main h1 {
   color: #edae49;
   position: relative;
   text-shadow: 6px 6px 0px #000000;
-  margin-bottom: 0px;
+  margin: 0 0 30px 0;
 }
 main h2 {
   font-size: 12vw;
@@ -304,7 +305,10 @@ main h2 {
   letter-spacing: 10px;
 }
 main img.code_boy {
-  width: calc(25vw + 100px);
+  position: absolute;
+  width: calc(15vw + 100px);
+  transform: translateY(250px);
+  transform: translateY(38vh);
 }
 main .fa-angle-down {
   color: #d3d3d3;
