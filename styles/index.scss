@@ -1,0 +1,73 @@
+@use './hamburger.scss';
+@use './menu.scss';
+@use './invitation.scss';
+@use './about_me.scss';
+@use './variables' as v;
+@use './welcome.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Advent Pro", sans-serif;
+  background-color: v.$blue;
+}
+main {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: calc(5em + 18vw);
+    font-weight: 500;
+    color: #edae49;
+    // color: v.$yellow;
+    position: relative;
+    text-shadow: 6px 6px 0px #000000;
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-size: 12vw;
+    font-size: calc(1em + 6vw);
+    font-weight: 300;
+    color: v.$gray;
+    transform: translateY(-30px);
+    line-height: 0.9em;
+  }
+  img.code_boy {
+    width: calc(25vw + 100px);
+  }
+  .fa-angle-down {
+    color: v.$gray;
+    transform: scale(2);
+    position: absolute;
+    bottom: 10%;
+    animation: arrowDown 1500ms linear infinite alternate;
+  }
+}
+@keyframes arrowDown {
+  0% {
+    opacity: 1;
+    bottom: 10%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 5%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  main {
+    img.code_boy {
+      position: absolute;
+      width: 300px;
+      height: 500px;
+      transform: translate(-30vw, 42vh);
+    }
+  }
+}

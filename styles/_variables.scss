@@ -1,0 +1,12 @@
+$blue: #00798c;
+$yellow: #ffb600;
+$red: #d14657;
+$gray: #d3d3d3;
+$white: #f2f2f2;
+$black: #000000;
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

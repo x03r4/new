@@ -1,0 +1,61 @@
+@use './variables' as v;
+.menu_wrapper {
+  position: fixed;
+  opacity: 0;
+  // transition: all 300ms ease-in-out;
+  z-index: 10;
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+        transition: .1s ease-in-out;
+        a {
+      text-decoration: none;
+      font-size: calc(2em + 6vw);
+      font-weight: 600;
+      color: v.$blue;
+    }
+    }
+    li:hover {
+        transform: scale(0.99);
+    }
+    li:active {
+        transform: scale(0.97);
+
+    }
+  }
+}
+.menu_active {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-color: #edae49;
+  // background-color: v.$yellow;
+  transition: all 0.2s ease-in-out;
+}
+.menu_back_button {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: v.$blue;
+  width: calc(30px + 2vw);
+  height: calc(30px + 2vw);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  // transition: all 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fa-arrow-left {
+    transform: scale(1.8);
+    color: v.$gray;
+  }
+}

@@ -1,0 +1,85 @@
+@use './variables' as v;
+
+h1 {
+  position: relative;
+}
+.hamburger_container {
+  position: absolute;
+  top: calc(17% - 5px);
+  left: calc(50% + 2vw);
+  background-color: v.$red;
+  width: calc(30px + 2vw + 2px);
+  height: calc(30px + 2vw + 2px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: .2s ease-in-out;
+  animation: pulse 3s ease-in-out infinite;
+
+  .fa-bars {
+      color: v.$gray;
+      transform: scale(0.12);
+  }
+  .hamburger_line {
+    background-color: v.$gray;
+    width: calc(10px + 3vw);
+    height: 2px;
+  }
+  .hamburger_line::after {
+    position: absolute;
+    content: "";
+    background-color: v.$gray;
+    width: calc(10px + 3vw);
+    height: 2px;
+    top: 30%;
+    transform: translateY(-30%);
+  }
+  .hamburger_line::before {
+    position: absolute;
+    content: "";
+    background-color: v.$gray;
+    width: calc(10px + 3vw);
+    height: 2px;
+    top: 70%;
+    transform: translateY(-70%);
+  }
+}
+.hamburger_container:hover{
+  transform: scale(1.2);
+
+}
+.hamburger_container:active{
+  transform: scale(1);
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(209, 71, 90, 0.7), 0 0 0 0 rgba(209, 73, 91, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 20px rgba(209, 73, 91, 0), 0 0 0 0 rgba(209, 73, 91, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 20px rgba(209, 73, 91, 0), 0 0 0 0px rgba(209, 73, 91, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(209, 73, 91, 0), 0 0 0 0px rgba(209, 73, 91, 0);
+  }
+}
+
+
+
+// @media screen and (min-width: 1440px) {
+//   .hamburger_container {
+//     left: calc(17vw + 7px);
+//   }
+// }
+// @media screen and (min-width: 2560px) {
+//   .hamburger_container {
+//     left: calc(13vw + 4px);
+//     top: calc(17%);
+//   }
+// }
