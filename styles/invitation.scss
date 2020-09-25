@@ -1,5 +1,5 @@
 @use './variables' as v;
-@import './variables';
+@import "./variables";
 
 .invitation {
   @include flex_center;
@@ -12,6 +12,10 @@
     font-weight: normal;
     // transform: translateX(8vw);
     margin: 3rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .design_decoration {
       color: v.$yellow;
       font-weight: bold;
@@ -29,10 +33,7 @@
   .invitation {
     .text_container {
       margin: 8rem 0 8rem 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+
       // transform: translateX(7vw);
       .design_decoration {
         -webkit-text-stroke: 2px v.$blue;
