@@ -333,7 +333,10 @@ main .fa-angle-down {
     position: absolute;
     width: 300px;
     height: 500px;
-    transform: translate(-30vw, 42vh);
+    transform: translate(-30vw, 52vh);
+  }
+  main .fa-angle-down {
+    transform: scale(2);
   }
 }
 
